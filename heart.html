@@ -1,0 +1,65 @@
+<html>
+
+<body>
+    <div>
+        <h1>Will you be my valentine</h1>
+    </div>
+    <div class="buttons"> <button id="yesbutton">Yes</button>
+        <button id="nobutton">No</button>
+    </div>
+    <style>
+        div {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        button {
+            margin: 0 10px;
+            border-radius: 20px;
+            padding: 10px 30px;
+            box-shadow: 0 20px 40px rgba(235, 121, 228, 0.2);
+        }
+
+        #yesbutton {
+            background-color: #ff4d6d;
+            color: white;
+        }
+        h1{
+            color: rgb(241, 20, 145);
+        }
+        body {
+
+            background-image: url("https://hoanghamobile.com/tin-tuc/wp-content/uploads/2023/09/hinh-nen-tinh-yeu.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+        }
+
+        #yesbutton:hover {
+            transform: scale(1.1);
+            background-color: #ff3355;
+        }
+
+        #nobutton {
+            position: absolute;
+            z-index: 1000;
+            background-color: #ff4d6d;
+        }
+    </style>
+    <script>
+        document.getElementById("yesbutton").addEventListener("click", showAlert);
+        function showAlert() { alert("I love you, see you soon") };
+        var no = document.getElementById("nobutton");
+        no.addEventListener("click", change);
+        function change() {
+            var i = Math.floor(Math.random() * 1000) + 1;
+            var j = Math.floor(Math.random() * 700) + 1;
+            no.style.left = i + "px";
+            no.style.top = j + "px";
+        } 
+    </script>
+</body>
+
+</html>
